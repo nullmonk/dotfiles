@@ -1,6 +1,20 @@
 {{ $email := promptString "Git email" -}}
 {{ $username := promptString "Git username" -}}
 
+{{- $term := "" -}}
+{{- if lookPath "foot" -}}
+{{-   $term = "foot" -}}
+{{- else if lookPath "kitty" -}}
+{{-   $term = "kitty" -}}
+{{- else if lookPath "gnome-terminal" -}}
+{{-   $term = "gnome-terminal" -}}
+{{- else -}}
+{{-   $term = promptString "Default terminal not found. Please enter your preferred terminal:" -}}
+{{- end -}}
+
 [data]
     email = {{ $email | quote }}
     username = {{ $username | quote }}
+
+
+    term = {{ $term | quote }}
