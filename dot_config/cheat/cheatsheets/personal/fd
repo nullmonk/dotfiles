@@ -1,0 +1,9 @@
+# Show Hidden files
+fd -H zshrc
+
+# Convert all *.jpg files to *.png files. {} is a placeholder for the search result. {.} is the same, without the file extension
+fd -e jpg -x convert {} {.}.png
+
+# {//} - Parent directory of result
+# {/} - filename of result
+# {/.} - Basename without extension

@@ -1,0 +1,9 @@
+# Add a file
+chezmoi add ~/.bashrc
+
+
+# Goto the directory
+chezmoi cd
+
+# apply changes 
+chezmoi -v apply

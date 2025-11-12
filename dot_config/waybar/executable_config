@@ -10,19 +10,18 @@
     // Modules configuration
     "sway/workspaces": {
         "numeric-first": false,
-         "disable-scroll": true,
-         "all-outputs": false,
-         "format": "{name}: {icon}",
-         "persistent-workspaces": {
-            "kp": []
-         },
-
-         "format-icons": {
-             "1": "",
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         }
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name}: {icon}",
+        "persistent-workspaces": {
+	    "1": {} 
+	},
+        "format-icons": {
+	    "1": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"

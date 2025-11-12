@@ -1,0 +1,12 @@
+# Turn of wifi
+iwctl device wlan0 set-property Powered off
+
+# Turn on
+iwctl device wlan0 set-property Powered on
+
+# Scan for networks
+iwctl station wlan0 scan on
+
+iwctl station wlan0 get-networks
+
+iwctl station wlan0 connect "BSSID"
