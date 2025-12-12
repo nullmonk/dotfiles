@@ -23,9 +23,11 @@
 .config/waybar/**
 {{ end -}}
 
+
 # Ignore waynergy config if waynergy is not installed
 {{ if not (stat "/usr/bin/waynergy") -}}
 .config/waynergy/**
+.config/xkb/**
 {{ end -}}
 
 # Ignore systemd network configs if the directory doesn't exist
@@ -33,7 +35,20 @@
 etc/systemd/network/**
 {{ end -}}
 
+# Ignore greetd config if greetd is not installed
+{{ if not (lookPath "greetd") -}}
+etc/greetd/**
+{{ end -}}
+
 # Ignore iwd
 {{ if not (lookPath "iwctl") -}}
 etc/iwd/**
+{{ end -}}
+
+
+{{ if not (lookPath "makepkg") -}}
+etc/makepkg.conf
+{{ end -}}
+{{ if not (lookPath "pacman") -}}
+etc/pacman.conf
 {{ end -}}
