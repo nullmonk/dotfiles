@@ -1,4 +1,4 @@
-# Add a file
+# (re-)Add a file
 chezmoi add ~/.bashrc
 
 

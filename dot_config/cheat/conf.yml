@@ -23,7 +23,8 @@ cheatpaths:
   #  tags: [ community ]
   #  readonly: true
 
+  # R/W directly from chezmoi
   - name: personal
-    path: ~/.config/cheat/cheatsheets/personal
+    path: ~/.local/share/chezmoi/dot_config/cheat/cheatsheets/personal
     tags: [ personal ]
     readonly: false

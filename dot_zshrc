@@ -90,7 +90,7 @@ alias runn="systemd-run --user"
 alias df="choose_binary df dysk"
 alias grep="choose_binary grep rg"
 alias find="choose_binary find fd"
-alias xxd="choose_binary xxd hexyl"
+#alias xxd="choose_binary xxd hexyl"
 alias tail="choose_binary tail tspin"
 
 # TODO: Check if we are looking at logs, e.g. /var/log/, docker, journald, and pipe it into tspin
