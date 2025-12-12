@@ -1,3 +1,5 @@
+README.md
+
 # Ignore sway config if sway not installed or SWAY_SOCK not set
 {{ if not (lookPath "sway") -}}
 .config/sway/**
@@ -30,6 +32,7 @@
 .config/xkb/**
 {{ end -}}
 
+etc/**
 # Ignore systemd network configs if the directory doesn't exist
 {{ if not (stat "/etc/systemd/network") -}}
 etc/systemd/network/**
