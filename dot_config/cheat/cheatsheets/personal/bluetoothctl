@@ -1,0 +1,7 @@
+# alias blu
+bluetoothctl power on
+bluetoothctl power off
+bluetoothctl scan on
+bluetoothctl devices
+bluetoothctl connect <device>
+bluetoothctl trust <device>
