@@ -53,5 +53,6 @@ etc/iwd/**
 etc/makepkg.conf
 {{ end -}}
 {{ if not (lookPath "pacman") -}}
+pkgs.txt
 etc/pacman.conf
 {{ end -}}
