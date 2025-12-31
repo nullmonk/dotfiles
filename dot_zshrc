@@ -78,7 +78,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Hardcoded replacements
 alias blu="bluetoothctl"
 alias nc="ncat"
-alias ls="exa -l"
+alias ls="eza -l"
 alias cat="bat -pp"
 alias tree="exa --tree"
 alias rrsync="rsync --ignore-existing --exclude '*.part' -rP"
