@@ -1,1 +1,1 @@
-sudo tar -C /opt -xzvf discord-0.0.95.tar.gz
+sudo tar -C /opt -xzvf discord-*.tar.gz

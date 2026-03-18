@@ -1,0 +1,1 @@
+sudo systemctl start mullvad-daemon.service
