@@ -1,7 +1,9 @@
+export ANDROID_HOME=/opt/android-sdk
 export PATH=$HOME/bin:$HOME/.config/bin:/usr/local/bin:/home/lethicon/.local/share/gem/ruby/3.0.0/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 export ZSH="$HOME/.config/oh-my-zsh"
+export PATH=$PATH:$ANDROID_HOME/emulator:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools
 export _JAVA_AWT_WM_NONREPARENTING=1 # https://wiki.archlinux.org/title/Sway#Java_applications
 export EDITOR='vim'
 export TERM="xterm-256color"
@@ -70,6 +72,10 @@ choose_binary() {
   "$use" "$@"
 }
 
+# Work with sway to color the run0 window red
+run0() {
+    SYSTEMD_EMOJI=0 command run0 --empower --via-shell "$@"
+}
 
 # Use bat to colorize man pages
 export MANROFFOPT="-c"
@@ -80,7 +86,7 @@ alias blu="bluetoothctl"
 alias nc="ncat"
 alias ls="eza -l"
 alias cat="bat -pp"
-alias tree="exa --tree"
+alias tree="eza --tree --level=4"
 alias rrsync="rsync --ignore-existing --exclude '*.part' -rP"
 alias msync="rsync --ignore-existing --exclude '*.part'  --exclude '*.txt'  --exclude '*.jpg' -rP"
 alias files="systemd-run --user nautilus"
@@ -92,5 +98,5 @@ alias grep="choose_binary grep rg"
 alias find="choose_binary find fd"
 #alias xxd="choose_binary xxd hexyl"
 alias tail="choose_binary tail tspin"
-
+CODER_HEADER_COMMAND=~/.local/bin/coder-access-token
 # TODO: Check if we are looking at logs, e.g. /var/log/, docker, journald, and pipe it into tspin
